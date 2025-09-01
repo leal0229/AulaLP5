@@ -4,10 +4,24 @@
  */
 package tools;
 
+import javax.swing.JComponent;
+import javax.swing.JTextField;
+
 /**
  *
  * @author u11884167403
  */
 public class Util {
-    
+    public static void habilitar(boolean valor, JComponent ... componentes) {
+        for (int i = 0; i < componentes.length; i++) {
+            componentes[i].setEnabled(valor);           
+        }
+    }
+    public static void Limpar(JTextField ... componentes) {
+        for (int i = 0; i < componentes.length; i++) {
+           ((JTextField) componentes[1]).setText("");
+            
+        }
+   
+    }
 }

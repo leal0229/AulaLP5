@@ -5,6 +5,8 @@
  */
 package view;
 
+import tools.Util;
+
 
 
 
@@ -14,15 +16,13 @@ package view;
  */
 public class JDlgUsuarios extends javax.swing.JDialog {
 
-
-
-
     public JDlgUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
-        
+        Util.habilitar(false , jTxtApelido,jPwfSenha, jTxtCodigo, jTxtNome, jFmtCpf,jFmtDataDeNascimento);
+        Util.Limpar(jTxtApelido,jTxtCodigo,jTxtNome);
 
     }
     
@@ -85,6 +85,12 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         jLabel5.setText("Data de Nascimento");
 
         jLabel6.setText("Senha");
+
+        jPwfSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPwfSenhaActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Nível");
 
@@ -247,7 +253,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-
+Util.habilitar(true, jTxtApelido,jPwfSenha, jTxtCodigo, jTxtNome, jFmtCpf,jFmtDataDeNascimento);
+Util.habilitar(false, jBtnPesquisar,jBtnExcluir,jBtnIncluir);
 
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
@@ -277,7 +284,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-
+Util.habilitar(false, jTxtApelido,jPwfSenha, jTxtCodigo, jTxtNome, jFmtCpf,jFmtDataDeNascimento);
+Util.habilitar(true, jBtnAlterar,jBtnExcluir,jBtnPesquisar,jBtnIncluir);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jTxtCodigoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTxtCodigoFocusLost
@@ -288,6 +296,10 @@ public class JDlgUsuarios extends javax.swing.JDialog {
     private void jCboNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboNivelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCboNivelActionPerformed
+
+    private void jPwfSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPwfSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPwfSenhaActionPerformed
 
     /**
      * @param args the command line arguments
