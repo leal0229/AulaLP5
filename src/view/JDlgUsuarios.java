@@ -264,8 +264,7 @@ Util.habilitar(false, jBtnPesquisar,jBtnExcluir,jBtnIncluir);
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        // TODO add your handling code here:
-
+Util.perguntar("quer me dar trabalho para excluir mesmo" );
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
 
@@ -277,8 +276,7 @@ Util.habilitar(false, jBtnPesquisar,jBtnExcluir,jBtnIncluir);
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-        // TODO add your handling code here: 
-
+Util.mensagem("não implementado seu bosta");
 
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
